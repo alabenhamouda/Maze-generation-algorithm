@@ -4,20 +4,20 @@ var stack = [];
 var current;
 const advance = [0, 0, 255];
 const backtrack = 255;
-
+const widthRatio = 0.65;
 
 function setup(){
     createCanvas(900, 900);
     background(51);
     // Set framerate
-    frameRate(15);
+    // frameRate(20);
     // Find out cols rows and widths
     const cols = 30;
     const rows = 30;
     grid.cols = cols;
     grid.rows = rows;
     let w = floor(width / cols);
-    Cell.w = floor(w * 0.7);
+    Cell.w = floor(w * widthRatio);
     Wall.w = w - Cell.w;
     // Set up grid of cells and walls
     for(let c = 0; c < cols; c++){
