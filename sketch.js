@@ -9,6 +9,9 @@ const backtrack = 255;
 function setup(){
     createCanvas(900, 900);
     background(51);
+    // Set framerate
+    frameRate(15);
+    // Find out cols rows and widths
     const cols = 30;
     const rows = 30;
     grid.cols = cols;
